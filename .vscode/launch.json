@@ -1,0 +1,29 @@
+{
+  // Используйте IntelliSense, чтобы узнать о возможных атрибутах.
+  // Наведите указатель мыши, чтобы просмотреть описания существующих атрибутов.
+  // Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "2.0.0",
+  "configurations": [
+    {
+      "name": "run debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "targetArchitecture": "x86",
+      "program": "${workspaceFolder}\\s01.exe", //"program": "${workspaceRoot}\\${fileBasenameNoExtension}.exe",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "preLaunchTask": "build debug", //из tasks.json
+      "setupCommands": [
+        {
+          "description": "Включить автоматическое форматирование для gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
